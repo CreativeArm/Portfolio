@@ -9,7 +9,7 @@
 }
 
 
-/* @keyframes typing {
+@keyframes typing {
     0% {
       width: 0;
     }
@@ -28,7 +28,7 @@
     50% {
       border-color: black;
     }
-  } */
+  }
   
   .typing-effect {
     overflow: hidden;
