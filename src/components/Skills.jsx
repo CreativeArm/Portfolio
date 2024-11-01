@@ -3,26 +3,27 @@ import React from "react";
 export default function Skills() {
   return (
     <>
-      <div className="py-24">
-        <h1 className="bg-white text-red-100 py-2 flex justify-center  font-bold text-[70px] ">
+      <div className="lg:py-24 bg-gray-100">
+        <h1 className=" text-red-100 py-2 flex justify-center  font-bold text-[70px] ">
           SKILLS
         </h1>
-        <p className=" text-lg text-center flex justify-center max-w-6xl ml-auto mr-auto">
+        <p className=" lg:text-lg max-w-sm text-left lg:text-center lg:mt-0 mt-10 flex justify-center lg:max-w-6xl  ml-auto mr-auto">
           With a strong foundation in front-end and back-end development, along
           with a creative flair for multimedia, I bring both technical precision
           and innovative design to each project. Here, you’ll find the tools,
           languages, and techniques that empower me to craft seamless,
           user-friendly, and visually engaging digital experiences.
         </p>
-        <div className="flex py-20 space-x-40 justify-center">
-          <div className="mt-auto mb-auto ">
+        <div className="lg:flex py-20 lg:space-x-40 justify-center">
+          <div className="lg:mt-auto lg:mb-auto ">
             <div>
-              <p className="relative text-center  text-2xl font-bold mb-8  after:justify-center after:mt-4 after:content-[''] after:block after:w-52 after:h-[2px] after:bg-gray-500 after:absolute ">
+              <p className="text-center  text-2xl font-bold mb-8 after:text-center   ">
                 My Focus
               </p>
+              <hr className="  h-0.5 -mt-4 mb-4 w-52 flex justify-center mr-auto ml-auto bg-gray-500" />
             </div>
-            <div>
-              <ul className="text-lg font-medium">
+            <div className="text-center lg:text-start mb-20 lg:mb-0">
+              <ul className="text-lg font-medium ">
                 <li className="mb-2">Web Development</li>
                 <li className="mb-2">Responsive Web App</li>
                 <li className="mb-2">Graphics Design</li>
@@ -31,54 +32,48 @@ export default function Skills() {
               </ul>
             </div>
           </div>
-          <div className="">
+          <div className="ml-10">
             <div className="flex mb-2">
-              <div className=" bg-black p-3 w-32 text-white font-medium text-center ">
+              <div className=" bg-black px-3 py-2 w-32 text-white font-medium text-center ">
                 HTML
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-60 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2 w-12 text-white font-medium"></div>
             </div>
             <div className="flex mb-2">
-              <div className=" bg-black p-3 w-32 text-white font-medium text-center ">
+              <div className=" bg-black px-3 py-2  w-32 text-white font-medium text-center ">
                 CSS
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-52 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2  w-20 text-white font-medium"></div>
             </div>
             <div className="flex mb-2">
-              <div className=" bg-black p-3  w-32 text-white font-medium text-center">
+              <div className=" bg-black px-3 py-2   w-32 text-white font-medium text-center">
                 JavaScript
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-40 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2  w-32 text-white font-medium"></div>
             </div>
             <div className="flex mb-2">
-              <div className=" bg-black p-3 w-32  text-white font-medium text-center">
+              <div className=" bg-black px-3 py-2  w-32  text-white font-medium text-center">
                 React Js
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-36 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2  w-36 text-white font-medium"></div>
             </div>
             <div className="flex mb-2">
-              <div className=" bg-black p-3 w-32  text-white font-medium text-center">
+              <div className=" bg-black px-3 py-2  w-32  text-white font-medium text-center">
                 Wordpress
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-56 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2  w-16 text-white font-medium"></div>
             </div>
             <div className="flex mb-2">
-              <div className=" bg-black p-3 w-32 text-white font-medium text-center">
+              <div className=" bg-black px-3 py-2  w-32 text-white font-medium text-center">
                 Photoshop
               </div>
-              <div className="bg-gray-600 p-2 w-72 text-white font-medium">
-                {" "}
-              </div>
+              <div className="bg-gray-600 px-3 py-2  w-64 text-white font-medium"></div>
+              <div className="bg-gray-300 px-3 py-2  w-8 text-white font-medium"></div>
             </div>
           </div>
         </div>

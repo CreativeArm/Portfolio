@@ -12,8 +12,8 @@ export default function Home() {
       <Herosection />
       <Skills />
       <Blog />
-      <Projects />
-      <Contact />
+      {/* <Projects />
+      <Contact /> */}
     </div>
   );
 }
