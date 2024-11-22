@@ -11,7 +11,7 @@ export default function AboutMe() {
           }}
         ></div>
         <div>
-          <h1 className="md:text-left pb-5  text-white font-bold text-5xl md:text-[70px] flex justify-center md:block ">
+          <h1 className="md:text-left pb-6  text-white font-bold text-5xl md:text-[70px] flex justify-center md:block ">
             ABOUT ME
           </h1>
           <h2 className="text-green-700 text-lg font-bold mb-2 flex justify-center md:block">
