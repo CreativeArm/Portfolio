@@ -7,7 +7,7 @@ export default function AboutMe() {
         <div
           className="h-[500px] w-96 rounded-sm bg-cover bg-center shadow-md hidden md:block"
           style={{
-            backgroundImage: `url('/public/images/Amos_new.jpg')`,
+            backgroundImage: `url('https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358_1280.jpg')`,
           }}
         ></div>
         <div>

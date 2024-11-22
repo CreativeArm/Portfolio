@@ -24,13 +24,13 @@ export default function Herosection() {
           <div
             className="hidden md:block h-80 w-80 md:rounded-full bg-black  bg-center items-center justify-center bg-cover mr-auto ml-auto"
             style={{
-              backgroundImage: `url('/public/images/Amos.jpg')`,
+              backgroundImage: `url('https://cdn.pixabay.com/photo/2024/06/22/22/56/man-8847069_1280.jpg')`,
             }}
           ></div>
           <div
             className="md:hidden rounded-md  h-[28rem] w-[20rem] bg-center items-center justify-center bg-cover mr-auto ml-auto"
             style={{
-              backgroundImage: `url('/public/images/Amos_new.jpg')`,
+              backgroundImage: `url('https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358_1280.jpg')`,
             }}
           ></div>
           <div className="flex justify-center py-8">
