@@ -7,7 +7,7 @@ const project = [
   },
   {
     id: 2,
-    img: "/public/images/mybirthdaypresent.jpg",
+    img: "https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_640.jpg",
     title: "My Birthday Present Website ",
     body: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet",
   },
