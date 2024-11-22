@@ -38,7 +38,7 @@ export default function () {
   });
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white " id="projects">
       <div className="max-w-[60%] mr-auto ml-auto ">
         <div className="text-green-700 pb-10 lg:pb-5 pt-20 flex justify-center  font-bold md:text-[70px] text-5xl text-center ">
           <h1>MY PROJECTS</h1>

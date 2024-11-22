@@ -36,7 +36,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="hidden md:flex  ">
+            <div className="hidden md:flex ">
               <div className="ml-4 flex items-center space-x-5 transition-all">
                 <Link
                   to="/"
@@ -67,7 +67,7 @@ export default function Header() {
                 </Link>
 
                 <Link
-                  to="#project"
+                  to="#projects"
                   className="mx-4 font-light text-lg hover:text-green-300 text-white"
                 >
                   Projects
@@ -112,7 +112,7 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/about"
+                to="#about"
                 onClick={() => setNavbar(!navbar)}
                 className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
@@ -120,7 +120,7 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/skills"
+                to="#skills"
                 onClick={() => setNavbar(!navbar)}
                 className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
@@ -128,7 +128,7 @@ export default function Header() {
               </Link>
 
               <Link
-                to="blog"
+                to="#blog"
                 onClick={() => setNavbar(!navbar)}
                 className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
@@ -136,7 +136,7 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/projects"
+                to="#projects"
                 onClick={() => setNavbar(!navbar)}
                 className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
@@ -144,7 +144,7 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/contact"
+                to="#contact"
                 onClick={() => setNavbar(!navbar)}
                 className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >

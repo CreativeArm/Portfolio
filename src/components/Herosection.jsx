@@ -28,7 +28,7 @@ export default function Herosection() {
             }}
           ></div>
           <div
-            className="md:hidden rounded-md  h-[28rem] w-[20rem]  items-center justify-center bg-contain bg-center mr-auto ml-auto"
+            className="md:hidden rounded-md  h-[28rem] w-[20rem] items-center justify-center bg-cover bg-center mr-auto ml-auto"
             style={{
               backgroundImage: `url('https://static.wixstatic.com/media/c31f19_8dd97127a4a14c7caaad20c0c0256de9~mv2.jpg/v1/crop/x_0,y_449,w_2304,h_1974/fill/w_560,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Amos2.jpg')`,
             }}
