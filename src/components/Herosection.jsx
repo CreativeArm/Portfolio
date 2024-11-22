@@ -24,7 +24,7 @@ export default function Herosection() {
           <div
             className="hidden md:block h-80 w-80 md:rounded-full bg-black  bg-center items-center justify-center bg-cover mr-auto ml-auto"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2024/06/22/22/56/man-8847069_1280.jpg')`,
+              backgroundImage: `url('https://static.wixstatic.com/media/c31f19_8dd97127a4a14c7caaad20c0c0256de9~mv2.jpg/v1/crop/x_0,y_449,w_2304,h_1974/fill/w_560,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Amos2.jpg')`,
             }}
           ></div>
           <div
