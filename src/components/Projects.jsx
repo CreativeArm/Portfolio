@@ -1,82 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
+import project from "./project";
+import { Link } from "react-router-dom";
 
 export default function () {
-  return (
-    <div className="mb-10">
-      <div>
-        <p className="ml-[400px] text-2xl pt-10">Recent Works</p>
-        <div className="flex space-x-16 ml-[400px] border-b-2 border-slate-200 py-10 max-w-[65rem]">
-          <div className="">
-            <img src="/public/images/dashbord.png" width={"300rem"} alt="" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold pb-5">Designing Dashboards</h1>
-            <div className="flex items-center space-x-8 pb-5">
-              <div className="bg-black p-1 text-center text-white rounded-2xl">
-                <p className="text-lg font-bold px-2">2020</p>
-              </div>
-              <p className="text-2xl font-normal items-center text-slate-400">
-                Dashboard
-              </p>
+  const [details, setDetails] = useState(project);
+
+  const render = details.map((detail, idx) => {
+    return (
+      <div
+        key={idx}
+        className="md:w-[30rem] md:h-[34rem] w-[24rem] h-[38rem] shadow-lg  rounded-md group lg:mb-5 mb-20 "
+      >
+        <div className=" bg-white">
+          <div
+            className="h-[18rem] relative z-0 bg-cover bg-center hover:bg-green-500"
+            style={{ backgroundImage: `url(${detail.img})` }}
+          >
+            <div className="absolute inset-0  bg-gradient-to-t from-green-600 via-transparent to-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 z-0">
+              <h1>Lern MOre</h1>
             </div>
-            <p className="max-w-[42rem] text-lg font-medium">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
           </div>
-        </div>
-        <div className="flex space-x-16 ml-[400px] border-b-2 border-slate-200 py-10 max-w-[65rem]">
-          <div className="">
-            <img src="/public/images/portrait.png" width={"300rem"} alt="" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold pb-5">
-              Vibrant Portraits of 2020
-            </h1>
-            <div className="flex items-center space-x-8 pb-5">
-              <div className="bg-black p-1 text-center text-white rounded-2xl">
-                <p className="text-lg font-bold px-2">2022</p>
-              </div>
-              <p className="text-2xl font-normal items-center text-slate-400">
-                Illustration
-              </p>
-            </div>
-            <p className="max-w-[42rem] text-lg font-medium">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
-          </div>
-        </div>
-        <div className="flex space-x-16 ml-[400px] border-b-2 border-slate-200 py-10 max-w-[65rem]">
-          <div className="">
-            <img src="/public/images/typo.png" width={"300rem"} alt="" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold pb-5">
-              36 Days of Malayalam type
-            </h1>
-            <div className="flex items-center space-x-8 pb-5">
-              <div className="bg-black p-1 text-center text-white rounded-2xl">
-                <p className="text-lg font-bold px-2">2023</p>
-              </div>
-              <p className="text-2xl font-normal items-center text-slate-400">
-                Typography
-              </p>
-            </div>
-            <p className="max-w-[42rem] text-lg font-medium">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
-            </p>
+          <h2 className="text-center text-2xl pt-4 font-bold text-green-900">
+            {detail.title}
+          </h2>
+          <p className="px-8 py-4 text-center">{detail.body}</p>
+          <div className="grid justify-center">
+            <Link
+              to={"#"}
+              className="border-2 border-green-800 shadow-md font-medium p-2 mt-10 lg:mt-2  mr-auto hover:bg-green-900 hover:text-white transition ease-in-out "
+            >
+              View Project
+            </Link>
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <button className="border-red-300 border-2 text-lg py-2 px-8 rounded-sm    hover:bg-red-300 mt-10">
-          <a href="">View More</a>
-        </button>
+    );
+  });
+
+  return (
+    <div className="bg-white ">
+      <div className="max-w-[60%] mr-auto ml-auto ">
+        <div className="text-green-700 pb-10 lg:pb-5 pt-20 flex justify-center  font-bold md:text-[70px] text-5xl text-center ">
+          <h1>MY PROJECTS</h1>
+        </div>
+
+        <div className="lg:grid lg:grid-cols-2 md:justify-center lg:gap-10 md:my-20 my-30 grid justify-center ">
+          {render}
+        </div>
       </div>
     </div>
   );

@@ -3,11 +3,11 @@ import React from "react";
 export default function Skills() {
   return (
     <>
-      <div className="lg:py-24 bg-gray-100">
-        <h1 className=" text-red-100 py-2 flex justify-center  font-bold text-[70px] ">
+      <div className="lg:py-24 bg-gray-100" id="skills">
+        <h1 className=" text-green-700 py-6 flex justify-center  font-bold text-[70px] ">
           SKILLS
         </h1>
-        <p className=" lg:text-lg max-w-sm text-left lg:text-center lg:mt-0 mt-10 flex justify-center lg:max-w-6xl  ml-auto mr-auto">
+        <p className=" lg:text-lg max-w-sm md:text-left lg:text-center lg:mt-0 flex justify-center lg:max-w-6xl text-center px-6 md:px-0 ml-auto mr-auto">
           With a strong foundation in front-end and back-end development, along
           with a creative flair for multimedia, I bring both technical precision
           and innovative design to each project. Here, you’ll find the tools,
@@ -32,7 +32,7 @@ export default function Skills() {
               </ul>
             </div>
           </div>
-          <div className="ml-10">
+          <div className=" max-w-[20rem] mr-auto ml-auto md:max-w-max">
             <div className="flex mb-2">
               <div className=" bg-black px-3 py-2 w-32 text-white font-medium text-center ">
                 HTML

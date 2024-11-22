@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
@@ -9,14 +9,26 @@ export default function Header() {
     }
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.hash);
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <div>
-      <nav className="bg-white shadow-md top-0 left-0 right-0 fixed md:h-auto ">
-        <div className="max-w-8xl mx-28 px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+      <nav className="bg-green-800 shadow-md top-0 left-0 right-0  md:h-auto fixed z-10 ">
+        <div className="md:max-w-6xl  mx-28 px-4 sm:px-6 lg:px-8 md:mr-auto md:ml-auto">
+          <div className="flex  items-center justify-between h-20">
             <div className="flex-shrink-0 text-gray-600 -ml-16  ">
               <Link
-                href={"/"}
+                to={"/"}
                 onClick={cancleClick}
                 className="font-extralight h-10 rounded-2xl bg-gray-200 hover:bg-gray-300 hover:text-black px-5 p-3 text-xl font-mono  "
               >
@@ -26,47 +38,50 @@ export default function Header() {
 
             <div className="hidden md:flex  ">
               <div className="ml-4 flex items-center space-x-5 transition-all">
-                <Link to="/" className="mx-4 font-semibold hover:text-red-600">
+                <Link
+                  to="/"
+                  className="mx-4 hover:text-green-300 font-light text-lg text-white"
+                >
                   Home
                 </Link>
 
                 <Link
-                  to="/about"
-                  className="mx-4 font-semibold hover:text-red-600"
+                  to="#about"
+                  className="mx-4 hover:text-green-300 font-light text-lg text-white"
                 >
                   About
                 </Link>
 
                 <Link
-                  to="/skills"
-                  className="mx-4 font-semibold hover:text-red-600"
+                  to="#skills"
+                  className="mx-4 hover:text-green-300 font-light text-lg text-white"
                 >
                   Skills
                 </Link>
 
                 <Link
-                  to="blog"
-                  className="mx-4 font-semibold hover:text-red-600"
+                  to="#blog"
+                  className="mx-4 hover:text-green-300 font-light text-lg text-white"
                 >
                   Blogs
                 </Link>
 
                 <Link
-                  to="/projects"
-                  className="mx-4 font-semibold hover:text-red-600"
+                  to="#project"
+                  className="mx-4 font-light text-lg hover:text-green-300 text-white"
                 >
                   Projects
                 </Link>
 
                 <Link
-                  to="/contact"
-                  className="mx-4 font-semibold hover:text-red-600"
+                  to="#contact"
+                  className="mx-4 font-light text-lg text-white hover:text-green-300"
                 >
                   Contact
                 </Link>
               </div>
             </div>
-            <div className="md:hidden flex items-center ml-28">
+            <div className="md:hidden flex items-center ">
               <button
                 className="p-3 text-gray-200 rounded-lg outline-none focus:border-gray-400 hover:outline-2 hover:outline-gray-500 "
                 onClick={() => setNavbar(!navbar)}
@@ -91,7 +106,7 @@ export default function Header() {
               <Link
                 to="/"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 Home
               </Link>
@@ -99,7 +114,7 @@ export default function Header() {
               <Link
                 to="/about"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 About
               </Link>
@@ -107,7 +122,7 @@ export default function Header() {
               <Link
                 to="/skills"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 Skills
               </Link>
@@ -115,7 +130,7 @@ export default function Header() {
               <Link
                 to="blog"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 Blogs
               </Link>
@@ -123,7 +138,7 @@ export default function Header() {
               <Link
                 to="/projects"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 Projects
               </Link>
@@ -131,7 +146,7 @@ export default function Header() {
               <Link
                 to="/contact"
                 onClick={() => setNavbar(!navbar)}
-                className="text-gray-600 block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
+                className="text-white block hover:bg-gray-300 hover:text-black  p-5 border-b-2 border-gray-200 "
               >
                 Contact
               </Link>
